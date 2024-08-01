@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribble Border</title>
+    <style>
+        .scribble-border {
+            position: relative;
+            border: 2px solid transparent;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .scribble-border::before {
+            content: "";
+            position: absolute;
+            top: -4px; left: -4px;
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            border: 2px solid black;
+            border-radius: 8px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.2) 2px,
+                rgba(0, 0, 0, 0.2) 4px
+            );
+            background-size: 10px 10px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="scribble-border">
+        <p>Scribble Border Effect</p>
+    </div>
+</body>
+</html>
