@@ -1,40 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scribble Border</title>
+    <title>Shipin5k</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        .scribble-border {
-            position: relative;
-            border: 2px solid transparent;
-            padding: 20px;
-            border-radius: 8px;
-            display: inline-block;
+        * {
+            color: #1e1e1e;
         }
-        .scribble-border::before {
-            content: "";
-            position: absolute;
-            top: -4px; left: -4px;
-            width: calc(100% + 8px);
-            height: calc(100% + 8px);
-            border: 2px solid black;
-            border-radius: 8px;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 2px,
-                rgba(0, 0, 0, 0.2) 2px,
-                rgba(0, 0, 0, 0.2) 4px
-            );
-            background-size: 10px 10px;
-            z-index: -1;
+
+        @font-face {
+            font-family: 'Virgil';
+            src: url('fonts/virgil.woff2') format('woff2');
+
+        }
+
+        body {
+            font-family: 'Virgil', sans-serif;
         }
     </style>
 </head>
-<body>
-    <div class="scribble-border">
-        <p>Scribble Border Effect</p>
-    </div>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="text-center py-8">
+        <img src="assets/shipin5kLogo.png" alt="Shipin5k Logo" class="mx-auto h-12 md:h-16">
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+
+        <div class="bg-white">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+            
+                <div class="">
+
+                    <div class="flex items-center justify-center" style="height: 100%;">
+                        <div class="">
+
+                            <p>“Do Things that Don't Scale.”</p>
+                            <p>Paul Graham</p>
+                        </div>
+
+                        <div class="" style="height: 100%;">
+                            <img src="assets/paulgraham.png" alt="Icon" style="width: 110px; height: auto; margin-left: 60px;">
+                        </div>
+                    </div>
+
+
+                </div>
+
+              <div>
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">How do we work ?</h2>
+                
+          
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                        <p>Sit on a discovery call with us.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                        <p>You don’t have to do anything else, apart from serving us as advance.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                        <p>We start the project and send you updates every week.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                        <p>Launch your MVP in 5 weeks.</p>
+                    </li>
+                </ul>
+              
+              </div>
+
+            </div>
+          </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Shipin5k - Get your MVP in Weeks</p>
+            <div class="mt-4">
+                <a href="#" class="hover:underline">Blog</a> |
+                <a href="#" class="hover:underline">FAQ</a> |
+                <a href="#" class="hover:underline">How we work</a> |
+                <a href="#" class="hover:underline">Refer</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

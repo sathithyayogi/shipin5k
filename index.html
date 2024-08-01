@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,30 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         * {
-            color:#1e1e1e;
+            color: #1e1e1e;
         }
+
         @font-face {
             font-family: 'Virgil';
             src: url('fonts/virgil.woff2') format('woff2');
-            
+
         }
+
         body {
-            font-family: 'Virgil', sans-serif;            
+            font-family: 'Virgil', sans-serif;
+        }
+
+        .scribbled-border {
+            border: 10px solid transparent;
+            padding: 0px;
+            width: fit-content;
+            text-align: center;
+            position: relative;
+            border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M2,2 Q10,5 18,2 T38,2 M2,38 Q10,35 18,38 T38,38 M2,2 Q5,10 2,18 T2,38 M38,2 Q35,10 38,18 T38,38" stroke="black" fill="none" stroke-width="1.4" /><path d="M4,4 Q12,7 20,4 T36,4 M4,36 Q12,33 20,36 T36,36 M4,4 Q7,12 4,20 T4,36 M36,4 Q33,12 36,20 T36,36" stroke="black" fill="none" stroke-width="1" /></svg>') 20;
         }
     </style>
 </head>
+
 <body class="bg-gray-100">
     <!-- Header -->
     <header class="text-center py-8">
@@ -29,56 +42,92 @@
     <!-- Main Content -->
     <main class="container mx-auto p-4">
         <!-- Hero Section -->
-        <section class="text-center mb-16">
+        <section class="text-center p-18 mb-10">
 
-                <p class="mb-2"> <span class=" text-2xl"> Limited Offer!</span> For First 5 clients, For only 5k, you'll get an MVP.</p>
+            <p class="mb-2"> <span class="text-green-600  text-2xl"> Limited Offer!</span> For First 5 clients, For only
+                5k, you'll get an MVP<span class="text-2xl"> 2 seats left</span> </p>
 
-            
-            
-            <h1 class="text-4xl font-bold mb-4">MVP in <span class="underline">5 weeks</span> for <span class="underlin">5k</span></h1>
-            <p class="text-lg mb-4">Finding difficulty in hiring devs? Agencies are too costly? <br> We build your product in 5 weeks.</p>
-            
+
+
+            <h1 class="text-4xl font-bold mt-8 mb-8">MVP in <span class="underline">5 weeks</span> for <span
+                    class="underline">$5k</span></h1>
+            <p class="text-lg mb-4">Finding difficulty in hiring devs? Agencies are too costly? <br> We build your
+                product in 5 weeks.</p>
+
             <!-- Centered Container -->
-            <div class="inline-block w-32 h-12 bg-cover bg-center" style="background-image: url('assets/bookCallBg.png');">
-                <a target="_blank" href="https://cal.com/sathithyayogi/mvp-discussion" class="font-bold flex items-center justify-center h-full w-full">
+            <div class="inline-block w-32 h-12 bg-cover bg-center"
+                style="background-image: url('assets/bookCallBg.png');">
+                <a target="_blank" href="https://cal.com/sathithyayogi/mvp-discussion"
+                    class="font-bold flex items-center justify-center h-full w-full text-green-600">
                     Book Call
                 </a>
             </div>
-            
+
         </section>
-        
-        
+
+
 
         <!-- How We Work Section -->
         <section class="mb-16">
-            <h2 class="text-2xl font-bold text-center mb-8">How do we work?</h2>
-            <ul class="space-y-4">
-                <li class="flex items-start">
-                    <img src="path-to-icon" alt="Icon" class="mr-4">
-                    <p>Sit on a discovery call with us.</p>
-                </li>
-                <li class="flex items-start">
-                    <img src="path-to-icon" alt="Icon" class="mr-4">
-                    <p>You don’t have to do anything else, apart from serving us as advance.</p>
-                </li>
-                <li class="flex items-start">
-                    <img src="path-to-icon" alt="Icon" class="mr-4">
-                    <p>We start the project and send you updates every week.</p>
-                </li>
-                <li class="flex items-start">
-                    <img src="path-to-icon" alt="Icon" class="mr-4">
-                    <p>Launch your MVP in 5 weeks.</p>
-                </li>
-            </ul>
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 items-center px-4 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+
+                <div class="scribbled-border">
+                    <div class="flex items-center justify-center" style="height: 100%;">
+                        <div class="">
+
+                            <p>“Do Things that Don't Scale.”</p>
+                            <p>Paul Graham</p>
+                        </div>
+
+                        <div class="" style="height: 100%;">
+                            <img src="assets/paulgraham.png" alt="Icon"
+                                style="width: 110px; height: auto; margin-left: 60px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">How do we work ?</h2>
+
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                            <p>Sit on a discovery call with us.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                            <p>You don’t have to do anything else, apart from serving us as advance.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                            <p>We start the project and send you updates every week.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                            <p>Launch your MVP in 5 weeks.</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
         </section>
+
+
+
 
         <!-- Why Trust Us Section -->
         <section class="mb-16">
             <h2 class="text-2xl font-bold text-center mb-8">Why Trust Us to Build Your MVP?</h2>
             <p class="text-lg mb-4">Minimize Risk, Maximize Potential!</p>
-            <p class="text-lg">Jumping into a full-scale product without testing the idea first can be costly. An MVP (Minimum Viable Product) helps you test the waters, gather feedback, and refine your concept before making bigger investments.</p>
+            <p class="text-lg">Jumping into a full-scale product without testing the idea first can be costly. An MVP
+                (Minimum Viable Product) helps you test the waters, gather feedback, and refine your concept before
+                making bigger investments.</p>
             <p class="text-lg mt-4">We’re Here to Help</p>
-            <p class="text-lg">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust us to bring your vision to life, helping you validate your idea quickly and efficiently.</p>
+            <p class="text-lg">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust us to
+                bring your vision to life, helping you validate your idea quickly and efficiently.</p>
         </section>
 
         <!-- Clients Section -->
@@ -86,10 +135,19 @@
             <h2 class="text-2xl font-bold mb-8">Our Clients</h2>
             <div class="flex justify-center space-x-8">
                 <!-- Replace src with the actual client logos -->
-                <img class="mx-auto h-12 md:h-16" src="assets/zeonLogo.png" alt="Zeon">
-                <img class="mx-auto h-12 md:h-16" src="assets/qvsLogo.png" alt="QVS Tours & Travels">
-                <img class="mx-auto h-12 md:h-16" src="assets/carbcontrolLogo.png" alt="Carb Control">
-                <img class="mx-auto h-12 md:h-16" src="assets/impQues.png" alt="Important Question">
+                <a href="https://zeonhq.com/" target="_blank">
+                    <img class="h-12 md:h-16" src="assets/zeonLogo.png" alt="Zeon">
+                </a>
+
+                <a href="https://zeonhq.com/" target="_blank">
+                    <img class="h-12 md:h-16" src="assets/qvsLogo.png" alt="QVS Tours & Travels">
+                </a>
+                <a href="https://zeonhq.com/" target="_blank">
+                    <img class="h-12 md:h-16" src="assets/carbcontrolLogo.png" alt="Carb Control">
+                </a>
+                <a href="https://zeonhq.com/" target="_blank">
+                    <img class="h-12 md:h-16" src="assets/impQues.png" alt="Important Question">
+                </a>
             </div>
         </section>
 
@@ -106,15 +164,18 @@
             <div class="space-y-4">
                 <div class="p-4 bg-white shadow-md rounded">
                     <h3 class="font-semibold mb-2">What tech stack you use?</h3>
-                    <p>Most products are developed using React.js, Node.js, Next.js. We also develop using the stack that you are saying.</p>
+                    <p>Most products are developed using React.js, Node.js, Next.js. We also develop using the stack
+                        that you are saying.</p>
                 </div>
                 <div class="p-4 bg-white shadow-md rounded">
                     <h3 class="font-semibold mb-2">How you will track the work?</h3>
-                    <p>We are using Git Project board to track the project and your team will also have access for that. We also update the progress on every 4 days once via WhatsApp or email.</p>
+                    <p>We are using Git Project board to track the project and your team will also have access for that.
+                        We also update the progress on every 4 days once via WhatsApp or email.</p>
                 </div>
                 <div class="p-4 bg-white shadow-md rounded">
                     <h3 class="font-semibold mb-2">Are there any refunds, If I don’t like the service?</h3>
-                    <p>Due to the high quality of the work, there will be no refunds issues. But, you can cancel and don’t need to pay the future amount.</p>
+                    <p>Due to the high quality of the work, there will be no refunds issues. But, you can cancel and
+                        don’t need to pay the future amount.</p>
                 </div>
             </div>
         </section>
@@ -149,4 +210,5 @@
         </div>
     </footer>
 </body>
+
 </html>
