@@ -6,33 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipin5k</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        * {
-            color: #1e1e1e;
-        }
-
-        @font-face {
-            font-family: 'Virgil';
-            src: url('fonts/virgil.woff2') format('woff2');
-
-        }
-
-        body {
-            font-family: 'Virgil', sans-serif;
-        }
-
-        .scribbled-border {
-            border: 10px solid transparent;
-            padding: 0px;
-            width: fit-content;
-            text-align: center;
-            position: relative;
-            border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M2,2 Q10,5 18,2 T38,2 M2,38 Q10,35 18,38 T38,38 M2,2 Q5,10 2,18 T2,38 M38,2 Q35,10 38,18 T38,38" stroke="black" fill="none" stroke-width="1.4" /><path d="M4,4 Q12,7 20,4 T36,4 M4,36 Q12,33 20,36 T36,36 M4,4 Q7,12 4,20 T4,36 M36,4 Q33,12 36,20 T36,36" stroke="black" fill="none" stroke-width="1" /></svg>') 20;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100">  
     <!-- Header -->
     <header class="text-center py-8">
         <img src="assets/shipin5kLogo.png" alt="Shipin5k Logo" class="mx-auto h-12 md:h-16">
@@ -42,15 +19,14 @@
     <!-- Main Content -->
     <main class="container mx-auto p-4">
         <!-- Hero Section -->
-        <section class="text-center p-18 mb-10">
+        <section class="text-center p-18 mb-40 mt-20">
 
-            <p class="mb-2"> <span class="text-green-600  text-2xl"> Limited Offer!</span> For First 5 clients, For only
-                5k, you'll get an MVP<span class="text-2xl"> 2 seats left</span> </p>
-
+            <p class="mb-2"> <span class="text-green-600  text-2xl"> Limited Offer!</span> for first 5 clients, Pay only 4k, pay 1k after you start making money from the product<span class="text-2xl text-green-600"> 2 seats left</span> </p>
 
 
-            <h1 class="text-4xl font-bold mt-8 mb-8">MVP in <span class="underline">5 weeks</span> for <span
-                    class="underline">$5k</span></h1>
+
+            <h1 class="text-4xl font-bold mt-8 mb-8">MVP in <span class="greenUL">5 weeks</span> for <span
+                    class="greenUL">$5k</span></h1>
             <p class="text-lg mb-4">Finding difficulty in hiring devs? Agencies are too costly? <br> We build your
                 product in 5 weeks.</p>
 
@@ -68,9 +44,9 @@
 
 
         <!-- How We Work Section -->
-        <section class="mb-16">
+        <section class="mb-16 mt-20">
             <div
-                class="mx-auto grid max-w-2xl grid-cols-1 items-center px-4 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+                class="mx-auto grid max-w-2xl grid-cols-1 items-center px-4 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8 gap-8">
 
                 <div class="scribbled-border">
                     <div class="flex items-center justify-center" style="height: 100%;">
@@ -119,19 +95,30 @@
 
 
         <!-- Why Trust Us Section -->
-        <section class="mb-16">
+        <section class="mb-16 mt-40">
             <h2 class="text-2xl font-bold text-center mb-8">Why Trust Us to Build Your MVP?</h2>
-            <p class="text-lg mb-4">Minimize Risk, Maximize Potential!</p>
-            <p class="text-lg">Jumping into a full-scale product without testing the idea first can be costly. An MVP
-                (Minimum Viable Product) helps you test the waters, gather feedback, and refine your concept before
-                making bigger investments.</p>
-            <p class="text-lg mt-4">We’re Here to Help</p>
-            <p class="text-lg">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust us to
+            <p class="text-xl mb-4">Minimize Risk, Maximize Potential!</p>
+
+            <div class="flex">
+                <img src="assets/diaognalBullet.png" alt="Icon" class="h-5 w-5 mr-2">
+                <p class="text-base mb-10">Jumping into a full-scale product without testing the idea first can be costly. An MVP
+                    (Minimum Viable Product) helps you test the waters, gather feedback, and refine your concept before
+                    making bigger investments.</p>
+                </div>
+
+            <p class="text-xl mt-4 mb-4">We’re Here to Help</p>
+
+
+            <div class="flex">
+                <img src="assets/diaognalBullet.png" alt="Icon" class="h-5 w-5 mr-2">
+            <p class="text-base">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust us to
                 bring your vision to life, helping you validate your idea quickly and efficiently.</p>
+            </div>
+
         </section>
 
         <!-- Clients Section -->
-        <section class="mb-16 text-center">
+        <section class="mb-16 text-center mt-40">
             <h2 class="text-2xl font-bold mb-8">Our Clients</h2>
             <div class="flex justify-center space-x-8">
                 <!-- Replace src with the actual client logos -->
