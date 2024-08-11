@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipin5k</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="./styles.css" rel="stylesheet" type="text/css">
     <style>
         @font-face {
             font-family: 'Virgil';
@@ -17,10 +16,53 @@
         body {
             font-family: 'Virgil', sans-serif;
         }
+
+        * {
+            color: #1e1e1e;
+        }
+
+        .scribbled-border {
+            border: 10px solid transparent;
+            padding: 0px;
+            width: fit-content;
+            text-align: center;
+            position: relative;
+            border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M2,2 Q10,5 18,2 T38,2 M2,38 Q10,35 18,38 T38,38 M2,2 Q5,10 2,18 T2,38 M38,2 Q35,10 38,18 T38,38" stroke="black" fill="none" stroke-width="1.4" /><path d="M4,4 Q12,7 20,4 T36,4 M4,36 Q12,33 20,36 T36,36 M4,4 Q7,12 4,20 T4,36 M36,4 Q33,12 36,20 T36,36" stroke="black" fill="none" stroke-width="1" /></svg>') 20;
+        }
+
+        .greenUL {
+            position: relative;
+        }
+
+        .greenUL:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-top: solid 3px green;
+            left: 0;
+            bottom: -5px;
+            border-radius: 70%;
+            height: 15px;
+        }        
+        
+        .blackUL {
+            position: relative;
+        }
+
+        .blackUL:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-top: solid 3px black;
+            left: 0;
+            bottom: -5px;
+            border-radius: 70%;
+            height: 15px;
+        }
     </style>
 </head>
 
-<body class="bg-gray-100">  
+<body class="bg-gray-100">
     <!-- Header -->
     <header class="text-center py-8">
         <img src="assets/shipin5kLogo.png" alt="Shipin5k Logo" class="mx-auto h-12 md:h-16">
@@ -32,7 +74,11 @@
         <!-- Hero Section -->
         <section class="text-center p-18 mb-40 mt-20">
 
-            <p class="mb-2"> <span class="text-green-600  text-2xl"> Limited Offer!</span> for first 5 clients, Pay only 4k, pay 1k after you start making money from the product<span class="text-2xl text-green-600"> 2 seats left</span> </p>
+            <div class="flex justify-center">
+                <p class="mb-2 scribbled-border"> <span class="text-green-600  text-2xl"> Limited Offer!</span> for
+                    first 5 clients, Pay only $4k, and pay $1k after you start making money from the product<span
+                        class="text-2xl text-green-600"> 2 seats left</span> </p>
+            </div>
 
 
 
@@ -53,20 +99,18 @@
         </section>
 
 
-
         <!-- How We Work Section -->
         <section class="mb-16 mt-20">
             <div
                 class="mx-auto grid max-w-2xl grid-cols-1 items-center px-4 sm:px-6 lg:max-w-7xl lg:grid-cols-2 lg:px-8 gap-8">
 
                 <div class="scribbled-border">
-                    <div class="flex items-center justify-center" style="height: 100%;">
-                        <div class="">
-
+                    <div class="flex items-center justify-end" style="height: 100%;">
+                        <!-- Changed justify-center to justify-end -->
+                        <div class="flex flex-col justify-end text-right"> <!-- Added text-right -->
                             <p>“Do Things that Don't Scale.”</p>
-                            <p>Paul Graham</p>
+                            <p class="justify-end">- Paul Graham</p>
                         </div>
-
                         <div class="" style="height: 100%;">
                             <img src="assets/paulgraham.png" alt="Icon"
                                 style="width: 110px; height: auto; margin-left: 60px;">
@@ -81,15 +125,20 @@
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
-                            <p>Sit on a discovery call with us.</p>
+                            <p>Sit on a discovery call with us,</p>
                         </li>
                         <li class="flex items-start">
                             <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
-                            <p>You don’t have to do anything else, apart from serving us as advance.</p>
+                            <p>We break down your project. Then,
+                                we sit down with you to prioritize features that we can build in 5 weeks.</p>
                         </li>
                         <li class="flex items-start">
                             <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
-                            <p>We start the project and send you updates every week.</p>
+                            <p>You don’t have to do anything else, apart from sending us $1k as advance.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
+                            <p>we start the project and send you updates every week.</p>
                         </li>
                         <li class="flex items-start">
                             <img src="assets/tickIcon.png" alt="Icon" class="h-5 w-5 mr-2">
@@ -112,53 +161,70 @@
 
             <div class="flex">
                 <img src="assets/diaognalBullet.png" alt="Icon" class="h-5 w-5 mr-2">
-                <p class="text-base mb-10">Jumping into a full-scale product without testing the idea first can be costly. An MVP
+                <p class="text-base mb-10">Jumping into a full-scale product without testing the idea first can be
+                    costly. An MVP
                     (Minimum Viable Product) helps you test the waters, gather feedback, and refine your concept before
                     making bigger investments.</p>
-                </div>
+            </div>
 
             <p class="text-xl mt-4 mb-4">We’re Here to Help</p>
 
 
             <div class="flex">
                 <img src="assets/diaognalBullet.png" alt="Icon" class="h-5 w-5 mr-2">
-            <p class="text-base">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust us to
-                bring your vision to life, helping you validate your idea quickly and efficiently.</p>
+                <p class="text-base">At Shipin5k, we specialize in delivering high-quality MVPs in just 5 weeks. Trust
+                    us to
+                    bring your vision to life, helping you validate your idea quickly and efficiently.</p>
             </div>
 
         </section>
 
         <!-- Clients Section -->
         <section class="mb-16 text-center mt-40">
-            <h2 class="text-2xl font-bold mb-8">Our Clients</h2>
+            <h2 class="text-2xl font-bold mb-8 inline-block px-4 blackUL">Our Clients</h2>
             <div class="flex justify-center space-x-8">
                 <!-- Replace src with the actual client logos -->
-                <a href="https://zeonhq.com/" target="_blank">
+                <a href="https://zeonhq.com" target="_blank">
                     <img class="h-12 md:h-16" src="assets/zeonLogo.png" alt="Zeon">
                 </a>
 
-                <a href="https://zeonhq.com/" target="_blank">
+                <a href="https://www.qvstravels.com" target="_blank">
                     <img class="h-12 md:h-16" src="assets/qvsLogo.png" alt="QVS Tours & Travels">
                 </a>
-                <a href="https://zeonhq.com/" target="_blank">
+
+                <div class="flex flex-col justify-center">
+                <a href="https://zeonhq.com/" target="_blank" class="text-center flex justify-center">
                     <img class="h-12 md:h-16" src="assets/carbcontrolLogo.png" alt="Carb Control">
                 </a>
+                <p class="text-green-600" style="font-size: 10px;">currently working</p>
+            </div>
+
+            <div class="flex flex-col justify-center">
                 <a href="https://zeonhq.com/" target="_blank">
                     <img class="h-12 md:h-16" src="assets/impQues.png" alt="Important Question">
                 </a>
+                <p class="text-green-600" style="font-size: 10px;">currently working</p>
+            </div>
+
             </div>
         </section>
 
         <!-- Referral Section -->
-        <section class="mb-16 text-center">
-            <h2 class="text-2xl font-bold mb-4">Refer & Earn up to 10% referral</h2>
+        <section class="mb-16 text-center mt-40">
+            <h2 class="text-2xl font-bold mb-4">Refer & Earn up to <span class="greenUL"> 10% referral</span></h2>
             <p class="text-lg mb-4">Earn 10% of the project cost on every paying customer that you refer.</p>
-            <a href="#" class="bg-green-500 hover:bg-green-700 font-bold py-2 px-4 rounded">Refer Now</a>
+            <div class="inline-block w-32 h-12 bg-cover bg-center"
+            style="background-image: url('assets/bookCallBg.png');">
+            <a target="_blank" href="https://cal.com/sathithyayogi/mvp-discussion"
+                class="font-bold flex items-center justify-center h-full w-full text-green-600">
+                Refer Now!
+            </a>
+        </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="mb-16">
-            <h2 class="text-2xl font-bold text-center mb-8">FAQ</h2>
+        <section class="text-center mb-16 mt-40">
+            <h2 class="text-2xl font-bold text-center mb-8 inline-block blackUL">FAQ</h2>
             <div class="space-y-4">
                 <div class="p-4 bg-white shadow-md rounded">
                     <h3 class="font-semibold mb-2">What tech stack you use?</h3>
@@ -179,8 +245,8 @@
         </section>
 
         <!-- Blogs Section -->
-        <section class="text-center mb-16">
-            <h2 class="text-2xl font-bold mb-8">Blogs</h2>
+        <section class="text-center mb-16 text-center">
+            <h2 class="text-2xl font-bold mb-8 blackUL inline-block">Blogs</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-4 bg-white shadow-md rounded">
                     <p class="text-lg">Tech stack currently using</p>
